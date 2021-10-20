@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="generate_my_car_view" model="ir.ui.view">
+        <field name="name">Generate My Car</field>
+        <field name="model">generate.my.car</field>
+        <field name="arch" type="xml">
+            <form string="Generate My Car" create="false">
+                <sheet>
+                    <p style="padding-bottom:10px">
+                        <h1>Generate My Car Form</h1>
+                    </p>
+                    <group>
+                        <field name="max_horse_power"/>
+                    </group>
+                    <footer>
+                        <button string="Generate" name="generate_my_car" type="object" class="btn-primary"
+                                style="margin-right:20px;"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_generate_my_car" model="ir.actions.act_window">
+        <field name="name">Generate My Car</field>
+        <field name="res_model">generate.my.car</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="generate_my_car_view"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_generate_my_car"
+        name="Reports Car"
+        action="action_generate_my_car"
+        sequence="30"
+        parent="my_first_module.menu_car"
+        />
+</odoo>

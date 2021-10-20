@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="car_feature_tree_view" model="ir.ui.view">
+            <field name="name">car.feature.tree.view</field>
+            <field name="model">car.feature</field>
+            <field name="arch" type="xml">
+                <tree string="Cars Feature">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_car_feature" model="ir.actions.act_window">
+            <field name="name">Car Feature</field>
+            <field name="res_model">car.feature</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the first course
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_car_feature"
+            name="Car Feature"
+            action="action_car_feature"
+            sequence="30"
+            parent="my_first_module.menu_car"
+            />
+    </data>
+</odoo>

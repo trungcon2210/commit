@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <report
+        id="patient_xlsx"
+        model="car.car"
+        string="Print to XLSX"
+        report_type="xlsx"
+        name="my_first_module.report_name_xls"
+        file="my_first_module.report_patient_xls"/>
+
+</odoo>
